@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Dewup"
         mc:Ignorable="d"
-        Title="Dewrito Updater" Height="350" Width="525" ResizeMode="NoResize" Background="#FF303030" Foreground="White" WindowStyle="None">
+        Title="Dewrito Updater" Height="350" Width="525" ResizeMode="NoResize" Background="#FF303030" Foreground="White" WindowStyle="None" WindowStartupLocation="CenterScreen">
     <Grid>
         <Rectangle StrokeThickness="1" Stroke="#7F000000">
             <Rectangle.Fill>
@@ -27,10 +27,12 @@
                 <ImageBrush ImageSource="DewShirt.png" Stretch="Uniform"/>
             </Rectangle.Fill>
         </Rectangle>
-        <Rectangle x:Name="changelogcontainer" HorizontalAlignment="Right" Margin="0,60,10,76" Width="270" Fill="#7F000000"/>
-        <TextBlock x:Name="changelog" Margin="0,70,20,86" TextWrapping="Wrap" Text="Changelog" HorizontalAlignment="Right" Width="250"/>
         <Rectangle x:Name="updateButton" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="100" Height="40" Fill="#7FFFB900" Margin="4,0,0,4" MouseEnter="button_MouseEnter" MouseLeave="button_MouseLeave" MouseDown="button_MouseDown" MouseUp="button_MouseUp"/>
         <Label x:Name="updateLabel" Content="Update" HorizontalAlignment="Left" VerticalAlignment="Bottom" Foreground="White" Height="40" VerticalContentAlignment="Center" Margin="4,0,0,4" IsHitTestVisible="False" Width="100" HorizontalContentAlignment="Center"/>
+        <Rectangle HorizontalAlignment="Right" Margin="0,60,10,76" Width="270" Fill="#7F000000"/>
+        <ScrollViewer x:Name="changelogScroller" HorizontalAlignment="Right" Height="194" Margin="0,70,20,86" Width="250" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch" VerticalScrollBarVisibility="Auto">
+            <TextBlock x:Name="changelog" TextWrapping="Wrap"/>
+        </ScrollViewer>
 
     </Grid>
 </Window>

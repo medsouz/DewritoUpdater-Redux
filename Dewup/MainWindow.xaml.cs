@@ -22,6 +22,14 @@ namespace Dewup
         public MainWindow()
         {
             InitializeComponent();
+
+
+            //temp: populate changelog
+            changelog.Text = "Changelog for version 0.6: ";
+            for (int i = 0; i < 50; i++)
+            {
+                changelog.Text += Environment.NewLine + "- Hi";
+            }
         }
 
         private void button_MouseEnter(object sender, MouseEventArgs e)
