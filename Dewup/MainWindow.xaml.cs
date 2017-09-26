@@ -22,8 +22,7 @@ namespace Dewup
         public MainWindow()
         {
             InitializeComponent();
-
-
+            
             //temp: populate changelog
             changelog.Text = "Changelog for version 0.6: ";
             for (int i = 0; i < 50; i++)

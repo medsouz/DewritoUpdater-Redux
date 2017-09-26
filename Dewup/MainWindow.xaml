@@ -9,7 +9,7 @@
     <Grid>
         <Rectangle StrokeThickness="1" Stroke="#7F000000">
             <Rectangle.Fill>
-                <ImageBrush ImageSource="valhalla.png" Stretch="UniformToFill"/>
+                <ImageBrush ImageSource="valhalla.png" Stretch="UniformToFill" RenderOptions.BitmapScalingMode="HighQuality"/>
             </Rectangle.Fill>
         </Rectangle>
 
@@ -22,7 +22,7 @@
             </Rectangle.Fill>
         </Rectangle>
         <Label Content="DewritoUpdater" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" Height="32" VerticalContentAlignment="Center" Margin="4,0,0,0" IsHitTestVisible="False"/>
-        <Rectangle Margin="0,60,284,76">
+        <Rectangle Margin="0,60,284,76" RenderOptions.BitmapScalingMode="HighQuality">
             <Rectangle.Fill>
                 <ImageBrush ImageSource="DewShirt.png" Stretch="Uniform"/>
             </Rectangle.Fill>
