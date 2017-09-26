@@ -23,5 +23,37 @@ namespace Dewup
         {
             InitializeComponent();
         }
+
+        private void button_MouseEnter(object sender, MouseEventArgs e)
+        {
+            ((Rectangle)sender).Fill = new SolidColorBrush(Color.FromArgb(100, 255, 185, 0));
+        }
+
+        private void button_MouseLeave(object sender, MouseEventArgs e)
+        {
+            ((Rectangle)sender).Fill = new SolidColorBrush(Color.FromArgb(127, 255, 185, 0));
+        }
+
+        private void button_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            ((Rectangle)sender).Fill = new SolidColorBrush(Color.FromArgb(50, 255, 185, 0));
+        }
+
+        private void button_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            ((Rectangle)sender).Fill = new SolidColorBrush(Color.FromArgb(100, 255, 185, 0));
+        }
+
+        private void closeButton_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            button_MouseUp(sender, e);
+            Environment.Exit(0);
+        }
+        
+        private void header_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            this.DragMove();
+        }
+        
     }
 }

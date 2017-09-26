@@ -7,42 +7,30 @@
         mc:Ignorable="d"
         Title="Dewrito Updater" Height="350" Width="525" ResizeMode="NoResize" Background="#FF303030" Foreground="White" WindowStyle="None">
     <Grid>
-        <Grid.Background>
-            <ImageBrush ImageSource="valhalla.png" Stretch="UniformToFill"/>
-        </Grid.Background>
-        <Rectangle Fill="#7F000000" Height="32" VerticalAlignment="Top"/>
+        <Rectangle StrokeThickness="1" Stroke="#7F000000">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="valhalla.png" Stretch="UniformToFill"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="header" Fill="#7F000000" Height="32" VerticalAlignment="Top" MouseDown="header_MouseDown"/>
         <Rectangle Fill="#66000000" Height="48" VerticalAlignment="Bottom"/>
-        <Button Content="Update" HorizontalAlignment="Left" Margin="4,0,0,4" VerticalAlignment="Bottom" Width="151" Height="41" Foreground="White" FontSize="14" TabIndex="1" BorderThickness="2,2,0,2">
-            <Button.Background>
-                <LinearGradientBrush EndPoint="1,2" StartPoint="0,0.5">
-                    <GradientStop Color="#7FFFB900" Offset="0"/>
-                    <GradientStop Offset="0.904" Color="#00000000"/>
-                    <GradientStop Color="#49946B00" Offset="0.657"/>
-                </LinearGradientBrush>
-            </Button.Background>
-            <Button.BorderBrush>
-                <LinearGradientBrush EndPoint="0,0.5" StartPoint="1,0.5">
-                    <GradientStop Color="#00000000" Offset="0"/>
-                    <GradientStop Color="#FFFFDC00" Offset="1"/>
-                    <GradientStop Color="#8D8D4700" Offset="0.432"/>
-                </LinearGradientBrush>
-            </Button.BorderBrush>
-        </Button>
-        <Button HorizontalAlignment="Right" VerticalAlignment="Top" Width="40" Height="24" BorderBrush="{x:Null}" Background="#FF419CAA" FontSize="14" Foreground="White" BorderThickness="0" Margin="0,4,4,0" TabIndex="2">
-            <Rectangle Height="10" Width="10" StrokeThickness="2">
-                <Rectangle.Fill>
-                    <ImageBrush ImageSource="close.png" Stretch="None"/>
-                </Rectangle.Fill>
-            </Rectangle>
-        </Button>
-        <Label Content="DewritoUpdater" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" Height="32" VerticalContentAlignment="Center" Margin="4,0,0,0"/>
+        <Rectangle x:Name="closeButton" HorizontalAlignment="Right" VerticalAlignment="Top" Width="42" Height="26" Fill="#7FFFB900" Margin="0,3,3,0" MouseEnter="button_MouseEnter" MouseLeave="button_MouseLeave" MouseDown="button_MouseDown" MouseUp="closeButton_MouseUp"/>
+        <Rectangle Height="10" Width="10" StrokeThickness="2" Margin="0,11,19,0" HorizontalAlignment="Right" VerticalAlignment="Top" IsHitTestVisible="False">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="close.png" Stretch="None"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Label Content="DewritoUpdater" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" Height="32" VerticalContentAlignment="Center" Margin="4,0,0,0" IsHitTestVisible="False"/>
         <Rectangle Margin="0,60,284,76">
             <Rectangle.Fill>
                 <ImageBrush ImageSource="DewShirt.png" Stretch="Uniform"/>
             </Rectangle.Fill>
         </Rectangle>
-        <Rectangle HorizontalAlignment="Right" Margin="0,60,10,76" Width="270" Fill="#7F000000"/>
-        <TextBlock Margin="0,70,20,86" TextWrapping="Wrap" Text="Changelog" HorizontalAlignment="Right" Width="250"/>
+        <Rectangle x:Name="changelogcontainer" HorizontalAlignment="Right" Margin="0,60,10,76" Width="270" Fill="#7F000000"/>
+        <TextBlock x:Name="changelog" Margin="0,70,20,86" TextWrapping="Wrap" Text="Changelog" HorizontalAlignment="Right" Width="250"/>
+        <Rectangle x:Name="updateButton" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="100" Height="40" Fill="#7FFFB900" Margin="4,0,0,4" MouseEnter="button_MouseEnter" MouseLeave="button_MouseLeave" MouseDown="button_MouseDown" MouseUp="button_MouseUp"/>
+        <Label x:Name="updateLabel" Content="Update" HorizontalAlignment="Left" VerticalAlignment="Bottom" Foreground="White" Height="40" VerticalContentAlignment="Center" Margin="4,0,0,4" IsHitTestVisible="False" Width="100" HorizontalContentAlignment="Center"/>
 
     </Grid>
 </Window>
